@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:woman/colors.dart';
 import 'package:woman/tabs/chat.dart';
 import 'package:woman/tabs/favorite.dart';
 import 'package:woman/tabs/home.dart';
@@ -19,21 +20,29 @@ class _TabsState extends State<Tabs> with SingleTickerProviderStateMixin {
     return Scaffold(
       body: TabBarView(
           controller: cntrl,
-          children: [ Profile(),HomeScreeen(), Favorite(), Chat()]),
-      bottomNavigationBar: TabBar(controller: cntrl, tabs: [
-        Tab(
-          icon: Icon(Icons.person),
-        ),
-        Tab(
-          icon: Icon(Icons.home),
-        ),
-        Tab(
-          icon: Icon(Icons.favorite),
-        ),
-        Tab(
-          icon: Icon(Icons.chat),
-        ),
-      ]),
+          children: [Profile(), HomeScreeen(), Favorite(), Chat()]),
+      bottomNavigationBar: Material(
+        color: darkpink,
+        child: TabBar(
+            controller: cntrl,
+            indicatorColor: Colors.white,
+            unselectedLabelColor: white.withOpacity(0.5),
+            labelColor: white,
+            tabs: [
+              Tab(
+                icon: Icon(Icons.person),
+              ),
+              Tab(
+                icon: Icon(Icons.home),
+              ),
+              Tab(
+                icon: Icon(Icons.favorite),
+              ),
+              Tab(
+                icon: Icon(Icons.chat),
+              ),
+            ]),
+      ),
     );
   }
 }
