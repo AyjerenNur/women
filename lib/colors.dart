@@ -9,4 +9,5 @@ Color textcolor3 = Color(0xffAAAAAA);
 Color textcolor4 = Color(0xff000000);
 Color black = Color(0xff000000);
 Color lightgray = Color(0xff868889);
-
+Color darkpink = Color(0xffEF8F8F);
+Color babypink = Color(0xffFFF3F3);
