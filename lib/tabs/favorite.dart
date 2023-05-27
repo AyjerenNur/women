@@ -1,5 +1,3 @@
-
-
 import 'package:flutter/material.dart';
 import 'package:woman/colors.dart';
 import 'package:woman/tabs/aboutinfo.dart';
@@ -22,7 +20,7 @@ class _FavoriteState extends State<Favorite> {
               padding: const EdgeInsets.only(top: 88),
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.center,
-                children:const [
+                children: const [
                   Text(
                     'What are you  struggling with?',
                     style: TextStyle(
@@ -60,7 +58,7 @@ class Imagery extends StatelessWidget {
   const Imagery({Key? key, required this.image, required this.text})
       : super(key: key);
   final String image;
-  final String text; 
+  final String text;
   @override
   Widget build(BuildContext context) {
     return Padding(
@@ -73,7 +71,8 @@ class Imagery extends StatelessWidget {
             child: Center(
               child: Container(
                 margin: const EdgeInsets.only(left: 16, right: 20),
-                padding:const EdgeInsets.symmetric(horizontal: 20, vertical: 14),
+                padding:
+                    const EdgeInsets.symmetric(horizontal: 20, vertical: 14),
                 decoration: BoxDecoration(
                   borderRadius: BorderRadius.circular(200),
                   color: darkpink,
