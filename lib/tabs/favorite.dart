@@ -1,8 +1,4 @@
-import 'dart:html';
-
 import 'package:flutter/material.dart';
-import 'package:flutter/src/widgets/framework.dart';
-import 'package:flutter/src/widgets/placeholder.dart';
 import 'package:woman/colors.dart';
 import 'package:woman/tabs/chat.dart';
 
@@ -24,7 +20,7 @@ class _FavoriteState extends State<Favorite> {
               padding: const EdgeInsets.only(top: 88),
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.center,
-                children: [
+                children: const [
                   Text(
                     'What are you  struggling with?',
                     style: TextStyle(
@@ -37,19 +33,19 @@ class _FavoriteState extends State<Favorite> {
             ),
             GestureDetector(
               onTap: () {
-                Navigator.of(context)
-                    .push(MaterialPageRoute(builder: ((context) => Chat())));
+                Navigator.of(context).push(
+                    MaterialPageRoute(builder: ((context) => const Chat())));
               },
-              child: Imagery(
+              child: const Imagery(
                 image: 'girlyoga.png',
                 text: 'What is PMS?',
               ),
             ),
-            Imagery(
+            const Imagery(
               image: 'fam.png',
               text: 'What is happening with my body and face?',
             ),
-            Imagery(
+            const Imagery(
               image: 'elec.png',
               text: 'Intim care',
             ),
@@ -59,10 +55,10 @@ class _FavoriteState extends State<Favorite> {
 }
 
 class Imagery extends StatelessWidget {
-  Imagery({Key? key, required this.image, required this.text})
+  const Imagery({Key? key, required this.image, required this.text})
       : super(key: key);
-  String image;
-  String text;
+  final String image;
+  final String text;
   @override
   Widget build(BuildContext context) {
     return Padding(
@@ -74,8 +70,9 @@ class Imagery extends StatelessWidget {
           Expanded(
             child: Center(
               child: Container(
-                margin: EdgeInsets.only(left: 16, right: 20),
-                padding: EdgeInsets.symmetric(horizontal: 20, vertical: 14),
+                margin: const EdgeInsets.only(left: 16, right: 20),
+                padding:
+                    const EdgeInsets.symmetric(horizontal: 20, vertical: 14),
                 decoration: BoxDecoration(
                   borderRadius: BorderRadius.circular(200),
                   color: darkpink,
@@ -84,7 +81,7 @@ class Imagery extends StatelessWidget {
                   child: Text(
                     text,
                     textAlign: TextAlign.center,
-                    style: TextStyle(
+                    style: const TextStyle(
                         fontSize: 15,
                         fontWeight: FontWeight.w500,
                         color: white),

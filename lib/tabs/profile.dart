@@ -1,6 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/src/widgets/framework.dart';
-import 'package:flutter/src/widgets/placeholder.dart';
 import 'package:woman/colors.dart';
 
 class Profile extends StatefulWidget {
@@ -13,37 +11,81 @@ class Profile extends StatefulWidget {
 class _ProfileState extends State<Profile> {
   @override
   Widget build(BuildContext context) {
-    double w = MediaQuery.of(context).size.width;
+    // double w = MediaQuery.of(context).size.width;
     return Scaffold(
         body: Column(
       children: [
         Padding(
           padding: const EdgeInsets.only(top: 60),
-          child: CircleAvatar(
-            minRadius: 58,
-            backgroundColor: Colors.pink,
+          child: ClipOval(
+            child: Image.asset('women1.png',
+            width: 118,
+            fit: BoxFit.cover,
+            ),
           ),
         ),
-        Padding(
-          padding: const EdgeInsets.all(8.0),
+        const Padding(
+          padding: EdgeInsets.all(8.0),
           child: Text('User13',
               style: TextStyle(color: black, fontWeight: FontWeight.bold)),
         ),
-        Padding(
-          padding: const EdgeInsets.only(bottom: 19),
+        const Padding(
+          padding: EdgeInsets.only(bottom: 19),
           child: Text('User13@gmail.com', style: TextStyle(color: lightgray)),
         ),
         Expanded(
             child: ListView(
+              padding: const EdgeInsets.symmetric(horizontal: 41),
           shrinkWrap: true,
           children: [
-            MyPinkButton(
+            const MyPinkButton(
               text: 'Мои достижения',
             ),
-            MyPinkButton(text: 'Мои психологи'),
-            MyPinkButton(
-              text: 'Написать психологу',
-            )
+            const MyPinkButton(text: 'Мои психологи'),
+           const Padding(padding: EdgeInsets.only(top: 45,bottom: 14),
+           child:Text('Записи' ,style: TextStyle(
+            fontWeight: FontWeight.w600, fontSize: 20, color: greyb, 
+           ),)
+           ),
+           Container(
+            padding: const EdgeInsets.symmetric(horizontal: 20,vertical: 10),
+            decoration: BoxDecoration(
+              color: white, borderRadius: BorderRadius.circular(9), 
+              boxShadow: [
+                BoxShadow(
+                  color: black.withOpacity(0.05),
+                  offset: const Offset(0, 0),
+                  blurRadius: 5,
+                )
+              ]
+            ),
+           child: Row(children: [
+            Padding(
+              padding: const EdgeInsets.only(right:20),
+              child: ClipOval(
+            child: Image.asset('women1.png',
+            width: 62,
+            fit: BoxFit.cover,
+            ),
+          ),
+            ),
+          Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              const Text('Инна Никбахшоева' ,style: TextStyle(
+            fontWeight: FontWeight.w600, fontSize: 20, color: greyb, 
+           ),),
+           Text('дата' ,style: TextStyle(
+            fontWeight: FontWeight.w600, fontSize: 12, color: greyb.withOpacity(0.7), 
+           ),),
+          const Text('15.05.2023  18:00' ,style: TextStyle(
+            fontWeight: FontWeight.w600, fontSize: 16, color: greyb, 
+           ),)
+        
+            ],
+          )
+            ],)
+           )
           ],
         ))
       ],
@@ -57,26 +99,26 @@ class MyPinkButton extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      margin: EdgeInsets.symmetric(vertical: 21, horizontal: 41),
-      padding: EdgeInsets.symmetric(vertical: 7),
+      margin: const EdgeInsets.symmetric(vertical: 21),
+      padding: const EdgeInsets.symmetric(vertical: 7),
       decoration: BoxDecoration(
           borderRadius: BorderRadius.circular(9), color: darkpink),
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
-          Spacer(),
+          const Spacer(),
           Expanded(
             flex: 3,
             child: Text(
               text,
               textAlign: TextAlign.center,
-              style: TextStyle(
+              style: const TextStyle(
                   fontWeight: FontWeight.w600,
                   fontSize: 20,
                   color: Colors.white),
             ),
           ),
-          Expanded(
+          const Expanded(
               child: Icon(
             Icons.arrow_forward_ios,
             color: Colors.white,

@@ -1,8 +1,6 @@
-import 'dart:html';
+
 
 import 'package:flutter/material.dart';
-import 'package:flutter/src/widgets/framework.dart';
-import 'package:flutter/src/widgets/placeholder.dart';
 import 'package:woman/colors.dart';
 
 class Chat extends StatefulWidget {
@@ -18,10 +16,10 @@ class _ChatState extends State<Chat> {
     return Scaffold(
       backgroundColor: babypink,
       appBar: AppBar(
-        leading: Icon(Icons.arrow_back),
+        leading: const Icon(Icons.arrow_back),
       ),
       body: Column(
-        children: [
+        children: const [
           Padding(
             padding: EdgeInsets.only(top: 32),
             child: Text(
@@ -46,14 +44,14 @@ class Conty extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      margin: EdgeInsets.symmetric(horizontal: 30, vertical: 20),
-      padding: EdgeInsets.symmetric(horizontal: 20, vertical: 20),
+      margin: const EdgeInsets.symmetric(horizontal: 30, vertical: 20),
+      padding:const  EdgeInsets.symmetric(horizontal: 20, vertical: 20),
       decoration: BoxDecoration(
           color: darkpink, borderRadius: BorderRadius.circular(13)),
       child: Column(
-        children: [
+        children: const [
           Padding(
-            padding: const EdgeInsets.only(bottom: 3),
+            padding: EdgeInsets.only(bottom: 3),
             child: Text(
               'Lorem ipsum',
               style: TextStyle(
