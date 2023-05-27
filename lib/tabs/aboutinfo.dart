@@ -25,34 +25,37 @@ class _AboutInfoState extends State<AboutInfo> {
         backgroundColor: Colors.transparent,
         elevation: 0,
       ),
-      body: Column(
-        children: [
-          const Text(
-            'Что такое ПМС?',
-            textAlign: TextAlign.center,
-            style: TextStyle(fontSize: 23, fontWeight: FontWeight.w700),
-          ),
-          const Conty(
-            title: 'ПМС',
-            subtext:
-                "Это предменструальный синдром, который возникает у женщин перед менструацией./nМенструация – это период, когда женщина вытекает кровь из матки.",
-          ),
-          const Conty(
-            title: 'Симптомы',
-            subtext:
-                'У него есть несколько симптомов, таких как:/nтревожность/nплачи/nперепады настроения/nпристрастие к еде/nплохая концентрация',
-          ),
-          const Conty(
-            title: 'Это все нормально?',
-            subtext:
-                'ДА. Это случается с большинством женщин! Менструация – это всего лишь признак полового созревания у девочек.',
-          ),
-          const Conty(
-            title: 'Смотрите также Половое созревание',
-            subtext:
-                'Это время, когда вы достигаете зрелости и становитесь способным к размножению.',
-          )
-        ],
+      body: SingleChildScrollView(
+        physics: BouncingScrollPhysics(),
+        child: Column(
+          children: [
+            const Text(
+              'Что такое ПМС?',
+              textAlign: TextAlign.center,
+              style: TextStyle(fontSize: 23, fontWeight: FontWeight.w700),
+            ),
+            const Conty(
+              title: 'ПМС',
+              subtext:
+                  "Это предменструальный синдром, который возникает у женщин перед менструацией./nМенструация – это период, когда женщина вытекает кровь из матки.",
+            ),
+            const Conty(
+              title: 'Симптомы',
+              subtext:
+                  'У него есть несколько симптомов, таких как:/nтревожность/nплачи/nперепады настроения/nпристрастие к еде/nплохая концентрация',
+            ),
+            const Conty(
+              title: 'Это все нормально?',
+              subtext:
+                  'ДА. Это случается с большинством женщин! Менструация – это всего лишь признак полового созревания у девочек.',
+            ),
+            const Conty(
+              title: 'Смотрите также Половое созревание',
+              subtext:
+                  'Это время, когда вы достигаете зрелости и становитесь способным к размножению.',
+            )
+          ],
+        ),
       ),
     );
   }
