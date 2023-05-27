@@ -62,7 +62,7 @@ class Imagery extends StatelessWidget {
   Imagery({Key? key, required this.image, required this.text})
       : super(key: key);
   String image;
-  String text; 
+  String text;
   @override
   Widget build(BuildContext context) {
     return Padding(
