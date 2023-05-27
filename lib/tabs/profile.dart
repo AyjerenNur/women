@@ -1,3 +1,4 @@
+import 'package:badges/badges.dart'as b;
 import 'package:flutter/material.dart';
 import 'package:woman/colors.dart';
 
@@ -17,10 +18,16 @@ class _ProfileState extends State<Profile> {
       children: [
         Padding(
           padding: const EdgeInsets.only(top: 60),
-          child: ClipOval(
-            child: Image.asset('women1.png',
-            width: 118,
-            fit: BoxFit.cover,
+          child: b.Badge(
+            position: b.BadgePosition.bottomEnd(bottom: 4, end: 4),
+            badgeStyle: b.BadgeStyle(badgeColor: black),
+            badgeContent: Icon(Icons.camera_alt_rounded, color: white, size: 15,),
+            child: ClipOval(
+              child: Image.asset(
+                'women1.png',
+                width: 118,
+                fit: BoxFit.cover,
+              ),
             ),
           ),
         ),
@@ -35,57 +42,79 @@ class _ProfileState extends State<Profile> {
         ),
         Expanded(
             child: ListView(
-              padding: const EdgeInsets.symmetric(horizontal: 41),
+          padding: const EdgeInsets.symmetric(horizontal: 41),
           shrinkWrap: true,
           children: [
             const MyPinkButton(
               text: 'Мои достижения',
             ),
             const MyPinkButton(text: 'Мои психологи'),
-           const Padding(padding: EdgeInsets.only(top: 45,bottom: 14),
-           child:Text('Записи' ,style: TextStyle(
-            fontWeight: FontWeight.w600, fontSize: 20, color: greyb, 
-           ),)
-           ),
-           Container(
-            padding: const EdgeInsets.symmetric(horizontal: 20,vertical: 10),
-            decoration: BoxDecoration(
-              color: white, borderRadius: BorderRadius.circular(9), 
-              boxShadow: [
-                BoxShadow(
-                  color: black.withOpacity(0.05),
-                  offset: const Offset(0, 0),
-                  blurRadius: 5,
-                )
-              ]
-            ),
-           child: Row(children: [
-            Padding(
-              padding: const EdgeInsets.only(right:20),
-              child: ClipOval(
-            child: Image.asset('women1.png',
-            width: 62,
-            fit: BoxFit.cover,
-            ),
-          ),
-            ),
-          Column(
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: [
-              const Text('Инна Никбахшоева' ,style: TextStyle(
-            fontWeight: FontWeight.w600, fontSize: 20, color: greyb, 
-           ),),
-           Text('дата' ,style: TextStyle(
-            fontWeight: FontWeight.w600, fontSize: 12, color: greyb.withOpacity(0.7), 
-           ),),
-          const Text('15.05.2023  18:00' ,style: TextStyle(
-            fontWeight: FontWeight.w600, fontSize: 16, color: greyb, 
-           ),)
-        
-            ],
-          )
-            ],)
-           )
+            const Padding(
+                padding: EdgeInsets.only(top: 45, bottom: 14),
+                child: Text(
+                  'Записи',
+                  style: TextStyle(
+                    fontWeight: FontWeight.w600,
+                    fontSize: 20,
+                    color: greyb,
+                  ),
+                )),
+            Container(
+                padding:
+                    const EdgeInsets.symmetric(horizontal: 20, vertical: 10),
+                decoration: BoxDecoration(
+                    color: white,
+                    borderRadius: BorderRadius.circular(9),
+                    boxShadow: [
+                      BoxShadow(
+                        color: black.withOpacity(0.05),
+                        offset: const Offset(0, 0),
+                        blurRadius: 5,
+                      )
+                    ]),
+                child: Row(
+                  children: [
+                    Padding(
+                      padding: const EdgeInsets.only(right: 20),
+                      child: ClipOval(
+                        child: Image.asset(
+                          'women1.png',
+                          width: 62,
+                          fit: BoxFit.cover,
+                        ),
+                      ),
+                    ),
+                    Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        const Text(
+                          'Инна Никбахшоева',
+                          style: TextStyle(
+                            fontWeight: FontWeight.w600,
+                            fontSize: 20,
+                            color: greyb,
+                          ),
+                        ),
+                        Text(
+                          'дата',
+                          style: TextStyle(
+                            fontWeight: FontWeight.w600,
+                            fontSize: 12,
+                            color: greyb.withOpacity(0.7),
+                          ),
+                        ),
+                        const Text(
+                          '15.05.2023  18:00',
+                          style: TextStyle(
+                            fontWeight: FontWeight.w600,
+                            fontSize: 16,
+                            color: greyb,
+                          ),
+                        )
+                      ],
+                    )
+                  ],
+                ))
           ],
         ))
       ],
