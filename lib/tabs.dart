@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:woman/colors.dart';
+import 'package:woman/tabs/aboutinfo.dart';
 import 'package:woman/tabs/chat.dart';
 import 'package:woman/tabs/favorite.dart';
 import 'package:woman/tabs/home.dart';

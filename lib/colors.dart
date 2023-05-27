@@ -6,6 +6,7 @@ const Color textcolor = Color(0xff313536);
 const Color textcolor2 = Color(0xff3B3C3E);
 const Color textfieldcolor = Color(0xffF2F2F2);
 const Color textfieldcolor2 = Color(0xff777778);
+const Color dropdowncolor = Color(0xFFF7F7F7);
 const Color textcolor3 = Color(0xffAAAAAA);
 const Color textcolor4 = Color(0xff000000);
 const Color black = Color(0xff000000);

@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:woman/colors.dart';
-import 'package:woman/tabs/chat.dart';
+import 'package:woman/tabs/aboutinfo.dart';
 
 class Favorite extends StatefulWidget {
   const Favorite({super.key});
@@ -33,8 +33,8 @@ class _FavoriteState extends State<Favorite> {
             ),
             GestureDetector(
               onTap: () {
-                Navigator.of(context).push(
-                    MaterialPageRoute(builder: ((context) => const Chat())));
+                Navigator.of(context)
+                    .push(MaterialPageRoute(builder: ((context) =>const AboutInfo())));
               },
               child: const Imagery(
                 image: 'girlyoga.png',
