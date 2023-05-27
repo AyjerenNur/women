@@ -17,9 +17,12 @@ class _ProfileState extends State<Profile> {
     return Scaffold(
         body: Column(
       children: [
-        CircleAvatar(
-          minRadius: 58,
-          backgroundColor: Colors.pink,
+        Padding(
+          padding: const EdgeInsets.only(top: 60),
+          child: CircleAvatar(
+            minRadius: 58,
+            backgroundColor: Colors.pink,
+          ),
         ),
         Padding(
           padding: const EdgeInsets.all(8.0),
@@ -34,9 +37,13 @@ class _ProfileState extends State<Profile> {
             child: ListView(
           shrinkWrap: true,
           children: [
-            MyPinkButton(text: 'Мои достижения',),
-            MyPinkButton(text:'Мои психологи'),
-            MyPinkButton(text: 'Написать психологу',)
+            MyPinkButton(
+              text: 'Мои достижения',
+            ),
+            MyPinkButton(text: 'Мои психологи'),
+            MyPinkButton(
+              text: 'Написать психологу',
+            )
           ],
         ))
       ],
@@ -52,8 +59,8 @@ class MyPinkButton extends StatelessWidget {
     return Container(
       margin: EdgeInsets.symmetric(vertical: 21, horizontal: 41),
       padding: EdgeInsets.symmetric(vertical: 7),
-      decoration:
-          BoxDecoration(borderRadius: BorderRadius.circular(9), color: pink),
+      decoration: BoxDecoration(
+          borderRadius: BorderRadius.circular(9), color: darkpink),
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [

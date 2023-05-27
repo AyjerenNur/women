@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/src/widgets/framework.dart';
 import 'package:flutter/src/widgets/placeholder.dart';
+import 'package:woman/colors.dart';
 
 class Favorite extends StatefulWidget {
   const Favorite({super.key});
@@ -12,8 +13,15 @@ class Favorite extends StatefulWidget {
 class _FavoriteState extends State<Favorite> {
   @override
   Widget build(BuildContext context) {
-    return Container(
-color: Colors.black,
-    );
+    return Scaffold(
+        backgroundColor: babypink,
+        body: Column(
+          children: [
+            Text('What are you  struggling with?'),
+            Row(
+              children: [Image.asset('')],
+            )
+          ],
+        ));
   }
 }
