@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:woman/tabs.dart';
 import 'auth.dart';
 
 void main() {
@@ -26,7 +25,7 @@ class MyApp extends StatelessWidget {
           // is not restarted.
           primarySwatch: Colors.blue,
           fontFamily: 'Lato'),
-      home: AuthScreen(),
+      home: const AuthScreen(),
     );
   }
 }

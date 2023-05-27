@@ -1,6 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/src/widgets/framework.dart';
-import 'package:flutter/src/widgets/placeholder.dart';
 import 'package:woman/colors.dart';
 
 class Favorite extends StatefulWidget {
@@ -17,7 +15,7 @@ class _FavoriteState extends State<Favorite> {
         backgroundColor: babypink,
         body: Column(
           children: [
-            Text('What are you  struggling with?'),
+            const Text('What are you  struggling with?'),
             Row(
               children: [Image.asset('')],
             )

@@ -15,15 +15,15 @@ class _AuthScreenState extends State<AuthScreen> {
   TextEditingController passctrl = TextEditingController();
   TextEditingController phonectrl = TextEditingController();
   InputDecoration fieldecor = InputDecoration(
-    contentPadding: EdgeInsets.symmetric(horizontal: 12, vertical: 8),
+    contentPadding: const EdgeInsets.symmetric(horizontal: 12, vertical: 8),
     filled: true,
     fillColor: textfieldcolor,
     enabledBorder: OutlineInputBorder(
         borderRadius: BorderRadius.circular(9),
-        borderSide: BorderSide(color: Colors.transparent)),
+        borderSide: const BorderSide(color: Colors.transparent)),
     focusedBorder: OutlineInputBorder(
         borderRadius: BorderRadius.circular(9),
-        borderSide: BorderSide(color: Colors.transparent)),
+        borderSide: const BorderSide(color: Colors.transparent)),
   );
   bool obscure = true;
   @override
@@ -34,8 +34,9 @@ class _AuthScreenState extends State<AuthScreen> {
         alignment: Alignment.bottomCenter,
         child: Container(
           width: double.infinity,
-          padding: EdgeInsets.only(top: 40, left: 20, right: 20, bottom: 10),
-          decoration: BoxDecoration(
+          padding:
+              const EdgeInsets.only(top: 40, left: 20, right: 20, bottom: 10),
+          decoration: const BoxDecoration(
               color: Colors.white,
               borderRadius: BorderRadius.vertical(top: Radius.circular(40))),
           child: Column(
@@ -43,10 +44,10 @@ class _AuthScreenState extends State<AuthScreen> {
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               Padding(
-                padding: EdgeInsets.only(bottom: 40),
+                padding: const EdgeInsets.only(bottom: 40),
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.center,
-                  children: [
+                  children: const [
                     Text(
                       'Регистрация!',
                       style: TextStyle(
@@ -57,7 +58,7 @@ class _AuthScreenState extends State<AuthScreen> {
                   ],
                 ),
               ),
-              Padding(
+              const Padding(
                 padding: EdgeInsets.only(bottom: 12),
                 child: Text('Имя пользователя',
                     style: TextStyle(
@@ -68,13 +69,13 @@ class _AuthScreenState extends State<AuthScreen> {
               TextField(
                 controller: loginctrl,
                 cursorColor: textfieldcolor2,
-                style: TextStyle(
+                style: const TextStyle(
                     fontSize: 18,
                     fontWeight: FontWeight.w400,
                     color: textfieldcolor2),
                 decoration: fieldecor,
               ),
-              Padding(
+              const Padding(
                 padding: EdgeInsets.only(bottom: 12),
                 child: Text('Номер телефона',
                     style: TextStyle(
@@ -85,13 +86,13 @@ class _AuthScreenState extends State<AuthScreen> {
               TextField(
                 controller: phonectrl,
                 cursorColor: textfieldcolor2,
-                style: TextStyle(
+                style: const TextStyle(
                     fontSize: 18,
                     fontWeight: FontWeight.w400,
                     color: textfieldcolor2),
                 decoration: fieldecor,
               ),
-              Padding(
+              const Padding(
                 padding: EdgeInsets.only(bottom: 12),
                 child: Text('Пароль',
                     style: TextStyle(
@@ -103,7 +104,7 @@ class _AuthScreenState extends State<AuthScreen> {
                   obscureText: obscure,
                   controller: passctrl,
                   cursorColor: textfieldcolor2,
-                  style: TextStyle(
+                  style: const TextStyle(
                       fontSize: 18,
                       fontWeight: FontWeight.w400,
                       color: textfieldcolor2),
@@ -125,7 +126,7 @@ class _AuthScreenState extends State<AuthScreen> {
                   Padding(
                     padding: EdgeInsets.only(
                         bottom: MediaQuery.of(context).size.height * 0.13),
-                    child: Text(
+                    child: const Text(
                       'Забыли пароль?',
                       style: TextStyle(
                           fontSize: 20,
@@ -139,7 +140,7 @@ class _AuthScreenState extends State<AuthScreen> {
                 padding: const EdgeInsets.only(bottom: 12),
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.center,
-                  children: [
+                  children: const [
                     Text(
                       'Уже есть аккаунт?',
                       style: TextStyle(
@@ -154,11 +155,11 @@ class _AuthScreenState extends State<AuthScreen> {
               GestureDetector(
                 onTap: () {
                   Navigator.of(context).pushReplacement(
-                      MaterialPageRoute(builder: (context) => Tabs()));
+                      MaterialPageRoute(builder: (context) => const Tabs()));
                 },
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.center,
-                  children: [
+                  children: const [
                     Text(
                       'Войти',
                       style: TextStyle(

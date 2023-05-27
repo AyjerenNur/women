@@ -20,7 +20,7 @@ class _TabsState extends State<Tabs> with SingleTickerProviderStateMixin {
     return Scaffold(
       body: TabBarView(
           controller: cntrl,
-          children: [Profile(), HomeScreeen(), Favorite(), Chat()]),
+          children: const [Profile(), HomeScreeen(), Favorite(), Chat()]),
       bottomNavigationBar: Material(
         color: darkpink,
         child: TabBar(
@@ -28,7 +28,7 @@ class _TabsState extends State<Tabs> with SingleTickerProviderStateMixin {
             indicatorColor: Colors.white,
             unselectedLabelColor: white.withOpacity(0.5),
             labelColor: white,
-            tabs: [
+            tabs: const [
               Tab(
                 icon: Icon(Icons.person),
               ),
@@ -36,7 +36,7 @@ class _TabsState extends State<Tabs> with SingleTickerProviderStateMixin {
                 icon: Icon(Icons.home),
               ),
               Tab(
-                icon: Icon(Icons.favorite),
+                icon: Icon(Icons.info),
               ),
               Tab(
                 icon: Icon(Icons.chat),
