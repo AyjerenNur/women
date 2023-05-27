@@ -21,29 +21,29 @@ class _ChatState extends State<Chat> {
           Padding(
             padding: EdgeInsets.only(top: 32),
             child: Text(
-              'What is PMS?',
+              'Что такое ПМС?',
               style: TextStyle(fontSize: 23, fontWeight: FontWeight.w700),
             ),
           ),
           const Conty(
-            title: 'PMS',
+            title: 'ПМС',
             subtext:
-                "It is a premenstrual syndrome that happens to women before menstruation./nMenstruation is a period when a woman discharges blood from the uterus",
+                "Это предменструальный синдром, который возникает у женщин перед менструацией./nМенструация – это период, когда женщина вытекает кровь из матки.",
           ),
           const Conty(
-            title: 'Symptoms',
+            title: 'Симптомы',
             subtext:
-                'It has a few symptoms like:/nAnxiety/nCrying spells/nMood swings/nFood cravings/nPoor concentration/nFood cravings',
+                'У него есть несколько симптомов, таких как:/nтревожность/nплачи/nперепады настроения/nпристрастие к еде/nплохая концентрация',
           ),
           const Conty(
-            title: 'Is it all normal?',
+            title: 'Это все нормально?',
             subtext:
-                'YES. It happens to most women! Menstruation is just a sign of puberty for girls',
+                'ДА. Это случается с большинством женщин! Менструация – это всего лишь признак полового созревания у девочек.',
           ),
           const Conty(
-            title: 'See also Puberty',
+            title: 'Смотрите также Половое созревание',
             subtext:
-                'It is the time when you reach maturity and become capable of reproduction',
+                'Это время, когда вы достигаете зрелости и становитесь способным к размножению.',
           ),
         ],
       ),

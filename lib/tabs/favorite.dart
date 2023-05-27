@@ -22,7 +22,7 @@ class _FavoriteState extends State<Favorite> {
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: const [
                   Text(
-                    'What are you  struggling with?',
+                    'С чем у вас проблемы?',
                     style: TextStyle(
                         fontSize: 23,
                         fontWeight: FontWeight.w700,
@@ -33,21 +33,21 @@ class _FavoriteState extends State<Favorite> {
             ),
             GestureDetector(
               onTap: () {
-                Navigator.of(context)
-                    .push(MaterialPageRoute(builder: ((context) =>const AboutInfo())));
+                Navigator.of(context).push(MaterialPageRoute(
+                    builder: ((context) => const AboutInfo())));
               },
               child: const Imagery(
                 image: 'girlyoga.png',
-                text: 'What is PMS?',
+                text: 'Что такое ПМС?',
               ),
             ),
             const Imagery(
               image: 'fam.png',
-              text: 'What is happening with my body and face?',
+              text: 'Что случилось с моим лицом и телом?',
             ),
             const Imagery(
               image: 'elec.png',
-              text: 'Intim care',
+              text: 'Насилие',
             ),
           ],
         ));

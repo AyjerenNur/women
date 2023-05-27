@@ -68,7 +68,7 @@ class _HomeScreeenState extends State<HomeScreeen> {
                           padding:
                               EdgeInsets.only(top: 15, right: 15, left: 15),
                           child: Text(
-                            'I am here to listen to all your needs and willing to help you. Voice your every problem to me and I will see with what I can help you./nDo not get into the trap of thinking that psychologists are only for the mentally ill. No, psychologists, like me, are here to listen to/nONLY YOU',
+                            'Я здесь чтобы выслушать все ваши потребности и готовы помочь вам. Расскажите мне свою каждую проблему, и я посмотрю чем смогу вам помочь./nНе попадайтесь в ловушку, думая, что психологи нужны только для психов. Нет, психологи, как и я, здесь чтобы слушать/n ТОЛЬКО ВАС',
                             style: TextStyle(
                                 fontSize: 16,
                                 fontWeight: FontWeight.w400,
