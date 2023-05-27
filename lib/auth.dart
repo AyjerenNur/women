@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:woman/tabs.dart';
+import 'dropdown.dart';
 
 import 'colors.dart';
 
@@ -14,6 +15,7 @@ class _AuthScreenState extends State<AuthScreen> {
   TextEditingController loginctrl = TextEditingController();
   TextEditingController passctrl = TextEditingController();
   TextEditingController phonectrl = TextEditingController();
+  String? selectedRole;
   InputDecoration fieldecor = InputDecoration(
     contentPadding: const EdgeInsets.symmetric(horizontal: 12, vertical: 8),
     filled: true,
@@ -122,11 +124,10 @@ class _AuthScreenState extends State<AuthScreen> {
                   ))),
               Row(
                 mainAxisAlignment: MainAxisAlignment.end,
-                children: [
+                children: const [
                   Padding(
-                    padding: EdgeInsets.only(
-                        bottom: MediaQuery.of(context).size.height * 0.13),
-                    child: const Text(
+                    padding: EdgeInsets.only(bottom: 12),
+                    child: Text(
                       'Забыли пароль?',
                       style: TextStyle(
                           fontSize: 20,
@@ -136,8 +137,30 @@ class _AuthScreenState extends State<AuthScreen> {
                   ),
                 ],
               ),
+              const Padding(
+                padding: EdgeInsets.only(bottom: 12),
+                child: Text('Статус',
+                    style: TextStyle(
+                        fontSize: 19,
+                        fontWeight: FontWeight.w500,
+                        color: textcolor2)),
+              ),
+              CustomDropdownButton2(
+                hint: 'Пользователь/Психолог',
+                onChanged: (value) {
+                  setState(() {
+                    selectedRole = value;
+                  });
+                },
+                buttonWidth: double.infinity,
+                dropdownWidth: MediaQuery.of(context).size.width * 0.92,
+                dropdownElevation: 0,
+                value: selectedRole,
+                dropdownItems: ['Пользователь', 'Психолог'],
+              ),
               Padding(
-                padding: const EdgeInsets.only(bottom: 12),
+                padding: EdgeInsets.only(
+                    bottom: 12, top: MediaQuery.of(context).size.height * 0.13),
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: const [
