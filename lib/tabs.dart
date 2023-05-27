@@ -23,25 +23,20 @@ class _TabsState extends State<Tabs> with SingleTickerProviderStateMixin {
           children: [Profile(), HomeScreeen(), Favorite(), Chat()]),
       bottomNavigationBar: Material(
         color: darkpink,
-        child: TabBar(
-            controller: cntrl,
-            indicatorColor: Colors.white,
-            unselectedLabelColor: white.withOpacity(0.5),
-            labelColor: white,
-            tabs: [
-              Tab(
-                icon: Icon(Icons.person),
-              ),
-              Tab(
-                icon: Icon(Icons.home),
-              ),
-              Tab(
-                icon: Icon(Icons.favorite),
-              ),
-              Tab(
-                icon: Icon(Icons.chat),
-              ),
-            ]),
+        child: TabBar(controller: cntrl, tabs: [
+          Tab(
+            icon: Icon(Icons.person),
+          ),
+          Tab(
+            icon: Icon(Icons.home),
+          ),
+          Tab(
+            icon: Icon(Icons.favorite),
+          ),
+          Tab(
+            icon: Icon(Icons.chat),
+          ),
+        ]),
       ),
     );
   }
