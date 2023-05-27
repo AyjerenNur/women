@@ -25,7 +25,7 @@ class _HomeScreeenState extends State<HomeScreeen> {
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: const [
                     Text(
-                      'I am listening to you,\nyour friend psychologist',
+                      'Я тебя слышу\nтвой друг психолог',
                       textAlign: TextAlign.center,
                       style: TextStyle(
                           fontSize: 23,
