@@ -1,16 +1,12 @@
 # woman
+Technologies Used: Flutter, Dart, HTML
+Menstrual Health & Education App | Hackathon Project
 
-A new Flutter project.
+Developed a Flutter-based mobile application designed to help teenage girls better understand menstruation and prepare for puberty, particularly in communities where menstrual health can be difficult to discuss openly.
 
-## Getting Started
-
-This project is a starting point for a Flutter application.
-
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+Key features:
+- Period tracking to help users monitor their menstrual cycle
+- Educational resources explaining menstruation, body changes, and menstrual health
+- Practical guidance on menstrual hygiene, including how to use sanitary pads
+- Information addressing common menstrual concerns and issues
+- A support feature allowing users to connect with a professional therapist
